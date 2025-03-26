@@ -23,7 +23,7 @@ import datetime
 
 
 ##### //MB\\
-parser = argparse.ArgumentParser(description="Heisenberg_VQE.py")
+parser = argparse.ArgumentParser(description="Run VQE simulations with Heisenberg_VQE.py")
 def to_uppercase(choice):
     return choice.upper()
 parser.add_argument("-o", "--optimizer", help="Name of optimizer", type=to_uppercase, required=True,
@@ -119,20 +119,20 @@ VQE_Heisenberg = Variational_Quantum_Eigensolver(Hamiltonian, qbit_num, config)
 
 ##### //MB\\
 optimizer_folder_name = args.optimizer.upper()
-VQE_Heisenberg.set_Project_Name(f'{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}')
+VQE_Heisenberg.set_Project_Name(f'data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}')
 
 try:
-    os.mkdir(optimizer_folder_name)
-    print(f"-- Directory '{optimizer_folder_name}' created successfully.")
+    os.mkdir('data/'+optimizer_folder_name)
+    print(f"-- Directory '{optimizer_folder_name}' created successfully in 'data' folder.")
 except FileExistsError:
-    print(f"-- Directory '{optimizer_folder_name}' already exists.", end=' ')
+    print(f"-- Directory '{optimizer_folder_name}' already exists in 'data' folder.", end=' ')
     try:
-        os.remove(f'{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt'  ) 
+        os.remove(f'data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt'  ) 
         print("Earlier simulation has been deleted.")
     except:
         print()
 except PermissionError:
-    print(f"-- Permission denied: Unable to create '{optimizer_folder_name}'.")
+    print(f"-- Permission denied: Unable to create 'data/{optimizer_folder_name}'.")
 except Exception as e:
     print(f"-- An error occurred: {e}")
 print(f"-- Run simulation with '{args.optimizer}' method; init param: '{args.init_parameters}'; N_qb={args.qbit_num}; layers={args.layers}")
@@ -148,8 +148,8 @@ if args.optimizer.upper() in ['NELDER_MEAD', 'POWELL', 'COBYLA']:
         global cost_function_evaluations
         global VQE_energy_one_step_before
         VQE_energy = VQE_Heisenberg.Optimization_Problem(params)
-        #if VQE_energy < 0.99*eigval:
-        #    raise StopIteration
+        if VQE_energy < 0.99*eigval:
+            raise StopIteration
         if VQE_energy_one_step_before >= VQE_energy+0.001:
             if cost_function_evaluations%500==0:
                 print(f"-- data saved to file -- costfunc evaluation: {cost_function_evaluations}; VQE_energy={VQE_energy}", end='\r')
@@ -193,7 +193,7 @@ if args.init_parameters == 'random':
     logs['init_parameters_between'] = [parameter_minval, parameter_maxval]
 logs['config'] = config
 logs['start_optimization'] = datetime.datetime.now().isoformat()  
-with open(optimizer_folder_name+f"/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_logs.json", "w") as f:
+with open(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_logs.json", "w") as f:
     json.dump(logs, f, indent=4)
 ##### \\MB//
 
@@ -218,17 +218,17 @@ for iter_idx in range(400):
     if args.optimizer.upper() in ['NELDER_MEAD', 'POWELL', 'COBYLA']:
         scipy_method_name= {'NELDER_MEAD':'Nelder-Mead', 'POWELL':'Powell', 'COBYLA':'Cobyla'}
         
-        #try:
-        with open(f"{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt", "a") as f:
-            min_process = minimize(objective_function, parameters, args=(f,),
-                        method=scipy_method_name[args.optimizer.upper()],
-                        options={"maxiter":config['max_inner_iterations']}
-                        )
-        parameters = min_process.x
-        VQE_energy = min_process.fun
+        try:
+            with open(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt", "a") as f:
+                min_process = minimize(objective_function, parameters, args=(f,),
+                            method=scipy_method_name[args.optimizer.upper()],
+                            options={"maxiter":config['max_inner_iterations']}
+                            )
+            parameters = min_process.x
+            VQE_energy = min_process.fun
             
-        #except StopIteration:
-        #    print("-- Optimization stopped early as the target energy was reached.")
+        except StopIteration:
+            print("-- Optimization stopped early as the target energy was reached.")
     else:
     ##### \\MB//
         VQE_Heisenberg.Start_Optimization()
@@ -252,7 +252,7 @@ for iter_idx in range(400):
     print('Current VQE energy: ', VQE_energy, ' normalized entropy: ', normalized_entropy)
 
     ##### //MB\\ ##just modified
-    np.save(optimizer_folder_name+f'/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}.npy', parameters, topology ) 
+    np.save(f'data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}.npy', parameters, topology ) 
     ##### \\MB//
            
     initial_state = np.zeros( (1 << qbit_num), dtype=np.complex128 )
@@ -273,7 +273,7 @@ for iter_idx in range(400):
     
     ##### //MB\\
     if iter_idx == 1:
-        opt_VQE_Energy = np.loadtxt(f"{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt")
+        opt_VQE_Energy = np.loadtxt(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt")
         if opt_VQE_Energy[0,1] - opt_VQE_Energy[-1,1] < 1:
            break
     ##### \\MB//
@@ -283,7 +283,7 @@ for iter_idx in range(400):
 
 ##### //MB\\
 logs['end_optimization'] = datetime.datetime.now().isoformat()
-with open(optimizer_folder_name+f"/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_logs.json", "w") as f:
+with open(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_logs.json", "w") as f:
     json.dump(logs, f, indent=4)
 ##### \\MB//
     

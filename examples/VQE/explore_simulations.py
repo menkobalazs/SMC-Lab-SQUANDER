@@ -10,7 +10,7 @@ def loadjson(filename):
         loaded_data = json.load(f)
     return loaded_data
 
-parser = argparse.ArgumentParser(description="explore_simulations.py")
+parser = argparse.ArgumentParser(description="Explore simulations of VQE algorithm.")
 parser.add_argument("-f", "--format", help="File format of saved figures", 
                     type=str, default='jpg',
                     choices=['jpg', 'pdf'])
@@ -36,12 +36,12 @@ for ip, lyr, qb in fig_params:
     max_num_of_cost_func_eval_per_method = []
     for opt in optimizers:
         try:             
-            data.append(np.loadtxt(f"{opt}/initp={ip}_lyr={lyr}_qb={qb}_costfuncs_and_entropy.txt"))
+            data.append(np.loadtxt(f"data/{opt}/initp={ip}_lyr={lyr}_qb={qb}_costfuncs_and_entropy.txt"))
             existing_optimizers.append(opt)
             max_num_of_cost_func_eval_per_method.append(data[-1][-1][0])
         except:
             pass
-    logs = loadjson(f"{existing_optimizers[0]}/initp={ip}_lyr={lyr}_qb={qb}_logs.json")
+    logs = loadjson(f"data/{existing_optimizers[0]}/initp={ip}_lyr={lyr}_qb={qb}_logs.json")
     
     plt.figure(figsize=(16,9))
     plt.hlines(logs['ground_state_of_Hamiltonian'], -5e5, max(max_num_of_cost_func_eval_per_method)*1.05,  color='black', linestyles='dashdot', label=r'$E_{ground}$')

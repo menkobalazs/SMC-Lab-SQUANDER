@@ -1,3 +1,30 @@
+# Scientific Modelling Computer Laboratory 2024/25/2 @ ELTE
+This is a forked version of the [SQUANDER]{https://github.com/rakytap/sequential-quantum-gate-decomposer} package.\\
+I am woring in the `sequential-quantum-gate-decomposer`/`examples`/`VQE` folder. My main project is to run Variational Quantum Eigensolver (VQE) algorithm with different classical optimization methods. 
+
+### Modified$^*$ or created files
+- `Heisenberg_VQE.py` (modified): 
+    - Added argument parser for improved flexibility in script execution.
+    - Modfied the `config` variable.
+    - Implemented a data-saving method to store simulation results.
+    - Introduced a new optimization method using SciPy’s `minimize` function, supporting `'Nelder-Mead'`, `'Powell'`, and `'Cobyla'` methods.
+    - Added an option for random initialization of the parameter vector.Added an option for random initialization of the parameter vector.
+    - Created a log file generator for tracking execution details.
+- `explore_simulations.py` (created): A script that generates figures from simulation results.
+- `run_simulations.sh` (created): A Bash script for running simulations in a `screen` session.
+
+$^*$My modifications are marked with my monogram (MB) as follows:
+```python
+# original codes ...
+##### //MB\\
+# my codes ...
+##### \\MB//
+```
+
+Below you can read the original `README.md` of SQUANDER package.
+---
+---
+
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4508680.svg)](https://doi.org/10.5281/zenodo.4508680)
  <a href="https://trackgit.com">
 <img src="https://us-central1-trackgit-analytics.cloudfunctions.net/token/ping/l0sfey1m19at85951dwl" alt="trackgit-views" />
