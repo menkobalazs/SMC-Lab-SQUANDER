@@ -106,9 +106,10 @@ Matrix get_matrix( Matrix_real& parameters, int parallel );
 /**
 @brief Call to apply the gate on the input array/matrix by U3*input
 @param parameters An array of parameters to calculate the matrix of the U3 gate.
-@param input The input array on which the gate is applied
+@param inputs The input array on which the gate is applied
+@param parallel Set 0 for sequential execution, 1 for parallel execution with OpenMP and 2 for parallel with TBB (optional)
 */
-void apply_to_list( Matrix_real& parameters, std::vector<Matrix>& input );
+void apply_to_list( Matrix_real& parameters, std::vector<Matrix>& inputs, int parallel );
 
 /**
 @brief Call to apply the gate on the input array/matrix Gates_block*input
@@ -132,8 +133,9 @@ virtual void apply_from_right( Matrix_real& parameters_mtx, Matrix& input );
 @brief Call to evaluate the derivate of the circuit on an inout with respect to all of the free parameters.
 @param parameters An array of the input parameters.
 @param input The input array on which the gate is applied
+@param parallel Set 0 for sequential execution, 1 for parallel execution with OpenMP (NOT IMPLEMENTED YET) and 2 for parallel with TBB (optional)
 */
-virtual std::vector<Matrix> apply_derivate_to( Matrix_real& parameters_mtx, Matrix& input );
+virtual std::vector<Matrix> apply_derivate_to( Matrix_real& parameters_mtx, Matrix& input, int parallel );
 
 
 
@@ -198,6 +200,23 @@ void add_cry(int target_qbit, int control_qbit);
 @param control_qbit The identification number of the control qubit. (0 <= target_qbit <= qbit_num-1)
 */
 void add_cry_to_front(int target_qbit, int control_qbit);
+
+/**
+@brief Append a CZ_NU gate to the list of gates
+@param target_qbit The identification number of the targt qubit. (0 <= target_qbit <= qbit_num-1)
+@param control_qbit The identification number of the control qubit. (0 <= target_qbit <= qbit_num-1)
+*/
+void Gates_block::add_cz_nu(int target_qbit, int control_qbit);
+
+
+
+/**
+@brief Add a CZ_NU gate to the front of the list of gates
+@param target_qbit The identification number of the targt qubit. (0 <= target_qbit <= qbit_num-1)
+@param control_qbit The identification number of the control qubit. (0 <= target_qbit <= qbit_num-1)
+*/
+void Gates_block::add_cz_nu_to_front(int target_qbit, int control_qbit );
+
 
 
 /**
@@ -469,7 +488,7 @@ virtual void reorder_qubits( std::vector<int> qbit_list );
 
 /**
 @brief Call to get the qubits involved in the gates stored in the block of gates.
-@return Return with a list of the invovled qubits
+@return Return with a list of the involved qubits
 */
 std::vector<int> get_involved_qubits();
 
@@ -552,6 +571,19 @@ double get_second_Renyi_entropy( Matrix_real& parameters_mtx, Matrix& input_stat
 
 
 
+/**
+@brief Call to obtain the parent gates in the circuit. A parent gate needs to be applied prior to the given gate. The parent gates are stored via the "parents" attribute of the gate instance
+@param gate The gate for which the parents are determined. 
+*/
+void determine_parents( Gate* gate );
+
+
+/**
+@brief Call to obtain the child gates in the circuit. A child gate needs to be applied after the given gate. The children gates are stored via the "children" attribute of the gate instance
+@param gate The gate for which the children are determined. 
+*/
+void determine_children( Gate* gate );
+
 
 
 //////// experimental attributes to partition the circuits into subsegments. Advantageous in simulation of larger circuits ///////////űű
@@ -601,9 +633,16 @@ void get_matrices_target_control(std::vector<Matrix> &u3_qbit, std::vector<int> 
 
 
 /**
-@brief Method reset the parameter start indices of gate operations incorporated in the circuit. (When a gate is inserted into the circuit at other position than the end.)
+@brief Method to reset the parameter start indices of gate operations incorporated in the circuit. (When a gate is inserted into the circuit at other position than the end.)
 */
 void reset_parameter_start_indices();
+
+
+
+/**
+@brief Method to reset the dependency graph of the gates in the circuit
+*/
+void reset_dependency_graph();
 
 
 /**

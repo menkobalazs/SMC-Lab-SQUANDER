@@ -89,10 +89,9 @@ N_Qubit_Decomposition_custom::~N_Qubit_Decomposition_custom() {
 /**
 @brief Start the disentanglig process of the unitary
 @param finalize_decomp Optional logical parameter. If true (default), the decoupled qubits are rotated into state |0> when the disentangling of the qubits is done. Set to False to omit this procedure
-@param prepare_export Logical parameter. Set true to prepare the list of gates to be exported, or false otherwise.
 */
 void
-N_Qubit_Decomposition_custom::start_decomposition(bool prepare_export) {
+N_Qubit_Decomposition_custom::start_decomposition() {
 
 
    //The stringstream input to store the output messages.
@@ -132,11 +131,6 @@ N_Qubit_Decomposition_custom::start_decomposition(bool prepare_export) {
     // final tuning of the decomposition parameters
     final_optimization();
 
-    // prepare gates to export
-    if (prepare_export) {
-        prepare_gates_to_export();
-    }
-
     // calculating the final error of the decomposition
     Matrix matrix_decomposed = Umtx.copy();
     apply_to(optimized_parameters_mtx, matrix_decomposed );
@@ -163,6 +157,7 @@ N_Qubit_Decomposition_custom::start_decomposition(bool prepare_export) {
     if ( gates_num.syc>0 ) sstream << gates_num.syc << " Sycamore opeartions," << std::endl;
     if ( gates_num.un>0 ) sstream << gates_num.un << " UN opeartions," << std::endl;
     if ( gates_num.adap>0 ) sstream << gates_num.adap << " Adaptive opeartions," << std::endl;
+    if ( gates_num.cz_nu>0 ) sstream << gates_num.cz_nu << " CZ_NU opeartions," << std::endl;
 
     	 
     sstream << std::endl;

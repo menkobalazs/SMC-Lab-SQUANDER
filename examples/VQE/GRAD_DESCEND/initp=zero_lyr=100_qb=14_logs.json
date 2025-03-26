@@ -1,0 +1,20 @@
+{
+    "ground_state_of_Hamiltonian": -25.280806356628656,
+    "method": "GRAD_DESCEND",
+    "layers": 100,
+    "qbit_num": 14,
+    "init_parameters": "zero",
+    "config": {
+        "max_inner_iterations": 400,
+        "batch_size": 32,
+        "agent_num": 1,
+        "agent_lifetime": 1,
+        "linesearch_points_agent": 3,
+        "agent_exploration_rate": 0.0,
+        "eta": 0.0001,
+        "adaptive_eta": 0,
+        "use_line_search": 0,
+        "output_periodicity": 4,
+        "convergence_length": 20
+    }
+}

@@ -31,7 +31,7 @@ limitations under the License.
 
 
 /// @brief Type definition of operation types (also generalized for decomposition classes derived from the class Operation_Block)
-typedef enum gate_type {GENERAL_OPERATION, UN_OPERATION, ON_OPERATION, CZ_OPERATION, CNOT_OPERATION, CH_OPERATION, U3_OPERATION, RY_OPERATION, RX_OPERATION, RZ_OPERATION, RZ_P_OPERATION, X_OPERATION, SX_OPERATION, CRY_OPERATION, SYC_OPERATION, BLOCK_OPERATION, COMPOSITE_OPERATION, ADAPTIVE_OPERATION, DECOMPOSITION_BASE_CLASS, SUB_MATRIX_DECOMPOSITION_CLASS, N_QUBIT_DECOMPOSITION_CLASS_BASE, N_QUBIT_DECOMPOSITION_CLASS, Y_OPERATION, Z_OPERATION, H_OPERATION, CUSTOM_KERNEL_1QUBIT_GATE_OPERATION} gate_type;
+typedef enum gate_type {GENERAL_OPERATION, UN_OPERATION, ON_OPERATION, CZ_OPERATION, CNOT_OPERATION, CH_OPERATION, U3_OPERATION, RY_OPERATION, RX_OPERATION, RZ_OPERATION, RZ_P_OPERATION, X_OPERATION, SX_OPERATION, CRY_OPERATION, SYC_OPERATION, BLOCK_OPERATION, COMPOSITE_OPERATION, ADAPTIVE_OPERATION, DECOMPOSITION_BASE_CLASS, SUB_MATRIX_DECOMPOSITION_CLASS, N_QUBIT_DECOMPOSITION_CLASS_BASE, N_QUBIT_DECOMPOSITION_CLASS, Y_OPERATION, Z_OPERATION, H_OPERATION, CZ_NU_OPERATION, CUSTOM_KERNEL_1QUBIT_GATE_OPERATION} gate_type;
 
 
 
@@ -57,6 +57,10 @@ protected:
     int parameter_num;
     /// the index in the parameter array (corrensponding to the encapsulated circuit) where the gate parameters begin (if gates are placed into a circuit a single parameter array is used to execute the whole circuit)
     int parameter_start_idx;
+    /// list of parent gates to be applied in the circuit prior to this current gate
+    std::vector<Gate*> parents;
+    /// list of child gates to be applied after this current gate
+    std::vector<Gate*> children;
 
 private:
 
@@ -92,24 +96,26 @@ Matrix get_matrix();
 
 /**
 @brief Call to apply the gate on a list of inputs
-@param input The input array on which the gate is applied
+@param inputs The input array on which the gate is applied
+@param parallel Set 0 for sequential execution, 1 for parallel execution with OpenMP and 2 for parallel with TBB (optional)
 */
-virtual void apply_to_list( std::vector<Matrix>& input );
+virtual void apply_to_list( std::vector<Matrix>& inputs, int parallel );
 
 
 /**
 @brief Abstract function to be overriden in derived classes to be used to transform a list of inputs upon a parametric gate operation
 @param parameter_mtx An array conatining the parameters of the gate
-@param input The input array on which the gate is applied
+@param inputs The input array on which the gate is applied
+@param parallel Set 0 for sequential execution, 1 for parallel execution with OpenMP and 2 for parallel with TBB (optional)
 */
-virtual void apply_to_list( Matrix_real& parameters_mtx, std::vector<Matrix>& input );
+virtual void apply_to_list( Matrix_real& parameters_mtx, std::vector<Matrix>& inputs, int parallel );
 
 /**
 @brief Call to apply the gate on the input array/matrix
 @param input The input array on which the gate is applied
 @param parallel Set 0 for sequential execution, 1 for parallel execution with OpenMP and 2 for parallel with TBB (optional)
 */
-virtual void apply_to( Matrix& input, int parallel=0 );
+virtual void apply_to( Matrix& input, int parallel );
 
 /**
 @brief Abstract function to be overriden in derived classes to be used to transform an input upon a parametric gate operation
@@ -117,15 +123,16 @@ virtual void apply_to( Matrix& input, int parallel=0 );
 @param input The input array on which the gate is applied
 @param parallel Set 0 for sequential execution, 1 for parallel execution with OpenMP and 2 for parallel with TBB (optional)
 */
-virtual void apply_to( Matrix_real& parameter_mtx, Matrix& input, int parallel=0 );
+virtual void apply_to( Matrix_real& parameter_mtx, Matrix& input, int parallel );
 
 
 /**
 @brief Call to evaluate the derivate of the circuit on an inout with respect to all of the free parameters.
 @param parameters An array of the input parameters.
 @param input The input array on which the gate is applied
+@param parallel Set 0 for sequential execution, 1 for parallel execution with OpenMP (NOT IMPLEMENTED YET) and 2 for parallel with TBB (optional)
 */
-virtual std::vector<Matrix> apply_derivate_to( Matrix_real& parameters_mtx_in, Matrix& input );
+virtual std::vector<Matrix> apply_derivate_to( Matrix_real& parameters_mtx_in, Matrix& input, int parallel );
 
 
 /**
@@ -180,6 +187,37 @@ int get_target_qbit();
 */
 int get_control_qbit();
 
+/**
+@brief Call to get the qubits involved in the gate operation.
+@return Return with a list of the involved qubits
+*/
+virtual std::vector<int> get_involved_qubits();
+
+
+/**
+@brief Call to add a child gate to the current gate 
+@param child The parent gate of the current gate.
+*/
+void add_child( Gate* child );
+
+
+/**
+@brief Call to add a parent gate to the current gate 
+@param parent The parent gate of the current gate.
+*/
+void add_parent( Gate* parent );
+
+
+/**
+@brief Call to erase data on children.
+*/
+void clear_children();
+
+
+/**
+@brief Call to erase data on parents.
+*/
+void clear_parents();
 
 /**
 @brief Call to get the number of free parameters
@@ -206,6 +244,35 @@ int get_qbit_num();
 @param start_idx The starting index
 */
 void set_parameter_start_idx(int start_idx);
+
+
+/**
+@brief Call to set the parents of the current gate
+@param parents_ the list of the parents
+*/
+void set_parents( std::vector<Gate*>& parents_ );
+
+
+/**
+@brief Call to set the children of the current gate
+@param children_ the list of the children
+*/
+void set_children( std::vector<Gate*>& children_ );
+
+
+
+/**
+@brief Call to get the parents of the current gate
+@return Returns with the list of the parents
+*/
+std::vector<Gate*> get_parents();
+
+
+/**
+@brief Call to get the children of the current gate
+@return Returns with the list of the children
+*/
+std::vector<Gate*> get_children();
 
 
 /**

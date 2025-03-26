@@ -175,10 +175,9 @@ N_Qubit_Decomposition_adaptive::~N_Qubit_Decomposition_adaptive() {
 /**
 @brief Start the disentanglig process of the unitary
 @param finalize_decomp Optional logical parameter. If true (default), the decoupled qubits are rotated into state |0> when the disentangling of the qubits is done. Set to False to omit this procedure
-@param prepare_export Logical parameter. Set true to prepare the list of gates to be exported, or false otherwise.
 */
 void
-N_Qubit_Decomposition_adaptive::start_decomposition(bool prepare_export) {
+N_Qubit_Decomposition_adaptive::start_decomposition() {
 
 
     //The stringstream input to store the output messages.
@@ -200,7 +199,7 @@ N_Qubit_Decomposition_adaptive::start_decomposition(bool prepare_export) {
    
     // finalyzing the gate structure by turning CRY gates inti CNOT gates and do optimization cycles to correct approximation in this transformation 
     // (CRY gates with small rotation angles are expressed with a single CNOT gate
-    finalize_circuit(prepare_export);
+    finalize_circuit();
 
 }
 
@@ -423,7 +422,7 @@ void N_Qubit_Decomposition_adaptive::compress_circuit() {
 /**
 @brief Call to replace adaptive gates with conventional gates and refine the gate structure.
 */
-void N_Qubit_Decomposition_adaptive::finalize_circuit(bool prepare_export) {
+void N_Qubit_Decomposition_adaptive::finalize_circuit() {
 
 
 // temporarily turn off OpenMP parallelism
@@ -537,7 +536,7 @@ void N_Qubit_Decomposition_adaptive::finalize_circuit(bool prepare_export) {
         int max_inner_iterations_loc = 10000;
         cDecomp_custom.set_max_inner_iterations( max_inner_iterations_loc );  
     }
-    cDecomp_custom.start_decomposition(true);
+    cDecomp_custom.start_decomposition();
     number_of_iters += cDecomp_custom.get_num_iters();
 
     current_minimum = cDecomp_custom.get_current_minimum();
@@ -574,11 +573,6 @@ void N_Qubit_Decomposition_adaptive::finalize_circuit(bool prepare_export) {
     
     }
 
-    // prepare gates to export
-    if (prepare_export) {
-        prepare_gates_to_export();
-    }
-
     decomposition_error = optimization_problem(optimized_parameters_mtx);
     
     // get the number of gates used in the decomposition
@@ -601,6 +595,7 @@ void N_Qubit_Decomposition_adaptive::finalize_circuit(bool prepare_export) {
         if ( gates_num.un>0 ) sstream << gates_num.un << " UN gates," << std::endl;
         if ( gates_num.cry>0 ) sstream << gates_num.cry << " CRY gates," << std::endl;  
         if ( gates_num.adap>0 ) sstream << gates_num.adap << " Adaptive gates," << std::endl;
+        if ( gates_num.cz_nu>0 ) sstream << gates_num.cz_nu << " CZ_NU gates," << std::endl;
     
         sstream << std::endl;
     	print(sstream, 1);	    	
@@ -672,7 +667,7 @@ N_Qubit_Decomposition_adaptive::optimize_imported_gate_structure(Matrix_real& op
         int max_inner_iterations_loc = 10000;
         cDecomp_custom.set_max_inner_iterations( max_inner_iterations_loc );    
     }
-    cDecomp_custom.start_decomposition(true);
+    cDecomp_custom.start_decomposition();
     number_of_iters += cDecomp_custom.get_num_iters();
     //cDecomp_custom.list_gates(0);
 
@@ -805,7 +800,7 @@ N_Qubit_Decomposition_adaptive::determine_initial_gate_structure(Matrix_real& op
                 }
                 
             
-                cDecomp_custom_random.start_decomposition(true);
+                cDecomp_custom_random.start_decomposition();
                 
 
                 
@@ -1205,7 +1200,7 @@ N_Qubit_Decomposition_adaptive::compress_gate_structure( Gates_block* gate_struc
         int max_inner_iterations_loc = 100;
         cDecomp_custom.set_max_inner_iterations( max_inner_iterations_loc ); 
     }
-    cDecomp_custom.start_decomposition(true);
+    cDecomp_custom.start_decomposition();
     iteration_num = cDecomp_custom.get_num_iters();
     double current_minimum_tmp = cDecomp_custom.get_current_minimum();
 
@@ -1743,21 +1738,16 @@ N_Qubit_Decomposition_adaptive::construct_adaptive_gate_layers() {
         for ( std::vector<matrix_base<int>>::iterator it=topology.begin(); it!=topology.end(); it++) {
 
             if ( it->size() != 2 ) {
-                std::stringstream sstream;
-	        sstream << "The connectivity data should contains two qubits" << std::endl;
-	        print(sstream, 0);	
-                it->print_matrix();
-                exit(-1);
+                std::string err("The connectivity data should contains two qubits.");
+                throw err;      
             }
 
             int control_qbit_loc = (*it)[0];
             int target_qbit_loc = (*it)[1];
 
-            if ( control_qbit_loc >= qbit_num || target_qbit_loc >= qbit_num ) {
-                std::stringstream sstream;
-	        sstream << "Label of control/target qubit should be less than the number of qubits in the register." << std::endl;	        
-                print(sstream, 0);
-                exit(-1);            
+            if ( control_qbit_loc >= qbit_num || target_qbit_loc >= qbit_num ) { 
+                std::string err("Label of control/target qubit should be less than the number of qubits in the register.");
+                throw err;             
             }
 
             Gates_block* layer = new Gates_block( qbit_num );
