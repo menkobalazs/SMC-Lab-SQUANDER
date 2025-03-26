@@ -2,16 +2,22 @@
 This is a forked version of the [SQUANDER]{https://github.com/rakytap/sequential-quantum-gate-decomposer} package.\\
 I am woring in the `sequential-quantum-gate-decomposer`/`examples`/`VQE` folder. My main project is to run Variational Quantum Eigensolver (VQE) algorithm with different classical optimization methods. 
 
+### Created folders
+- `data`: All the simulations stored here.
+- `docs`: All the written reports, cover letters and presentations stored here.
+- `figures`: All the generated figures stored here.
+
 ### Modified* or created files
 - `Heisenberg_VQE.py` (modified): 
     - Added argument parser for improved flexibility in script execution.
-    - Modfied the `config` variable.
+    - Modified the `config` variable.
     - Implemented a data-saving method to store simulation results.
     - Introduced a new optimization method using SciPy’s `minimize` function, supporting `'Nelder-Mead'`, `'Powell'`, and `'Cobyla'` methods.
-    - Added an option for random initialization of the parameter vector.Added an option for random initialization of the parameter vector.
+    - Added an option for random initialization of the parameter vector.
     - Created a log file generator for tracking execution details.
-- `explore_simulations.py` (created): A script that generates figures from simulation results.
 - `run_simulations.sh` (created): A Bash script for running simulations in a `screen` session.
+- `explore_simulations.py` (created): A script that generates figures from simulation results.
+
 
 *My modifications are marked with my monogram (MB) as follows:
 ```python

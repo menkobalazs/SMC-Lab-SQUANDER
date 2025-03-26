@@ -1,0 +1,1159 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      The system is: Linux - 3.10.0-1160.119.1.el7.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/3.31.4/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/3.31.4/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-5yTlT9"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-5yTlT9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-5yTlT9'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_05c4f
+        [1/2] /usr/bin/cc   -v -o CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o -c /home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+        Thread model: posix
+        gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/cc1 -quiet -v /home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o -version -o /tmp/cciD05Zb.s
+        GNU C (GCC) version 4.8.5 20150623 (Red Hat 4.8.5-44) (x86_64-redhat-linux)
+        	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        GNU C (GCC) version 4.8.5 20150623 (Red Hat 4.8.5-44) (x86_64-redhat-linux)
+        	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 231b3394950636dbfe0428e88716bc73
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         as -v --64 -o CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o /tmp/cciD05Zb.s
+        GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+        [2/2] : && /usr/bin/cc  -v -Wl,-v CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o -o cmTC_05c4f   && :
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+        Thread model: posix
+        gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_05c4f' '-mtune=generic' '-march=x86-64'
+         /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_05c4f /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. -v CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
+        collect2 version 4.8.5 20150623 (Red Hat 4.8.5-44)
+        /usr/bin/ld --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_05c4f /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. -v CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
+        GNU ld version 2.27-44.base.el7_9.1
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-5yTlT9']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_05c4f]
+        ignore line: [[1/2] /usr/bin/cc   -v -o CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o -c /home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c c++ objc obj-c++ java fortran ada go lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/cc1 -quiet -v /home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o -version -o /tmp/cciD05Zb.s]
+        ignore line: [GNU C (GCC) version 4.8.5 20150623 (Red Hat 4.8.5-44) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44)  GMP version 6.0.0  MPFR version 3.1.1  MPC version 1.0.1]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C (GCC) version 4.8.5 20150623 (Red Hat 4.8.5-44) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44)  GMP version 6.0.0  MPFR version 3.1.1  MPC version 1.0.1]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 231b3394950636dbfe0428e88716bc73]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o /tmp/cciD05Zb.s]
+        ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [[2/2] : && /usr/bin/cc  -v -Wl -v CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o -o cmTC_05c4f   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c c++ objc obj-c++ java fortran ada go lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_05c4f' '-mtune=generic' '-march=x86-64']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_05c4f /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. -v CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_05c4f] ==> ignore
+          arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+        ignore line: [collect2 version 4.8.5 20150623 (Red Hat 4.8.5-44)]
+        ignore line: [/usr/bin/ld --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_05c4f /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. -v CMakeFiles/cmTC_05c4f.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.8.5]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5;/usr/lib64;/lib64;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld version 2.27-44.base.el7_9.1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-hIaS8r"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-hIaS8r"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-hIaS8r'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_872fb
+        [1/2] /usr/bin/c++   -v -o CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o -c /home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+        Thread model: posix
+        gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/cc1plus -quiet -v -D_GNU_SOURCE /home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccGk6dEj.s
+        GNU C++ (GCC) version 4.8.5 20150623 (Red Hat 4.8.5-44) (x86_64-redhat-linux)
+        	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5
+         /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux
+         /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward
+         /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        GNU C++ (GCC) version 4.8.5 20150623 (Red Hat 4.8.5-44) (x86_64-redhat-linux)
+        	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44), GMP version 6.0.0, MPFR version 3.1.1, MPC version 1.0.1
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 51b2dcccf6085e5bfbbf3932e5685252
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         as -v --64 -o CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccGk6dEj.s
+        GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        [2/2] : && /usr/bin/c++  -v -Wl,-v CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_872fb   && :
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+        Thread model: posix
+        gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_872fb' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_872fb /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. -v CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
+        collect2 version 4.8.5 20150623 (Red Hat 4.8.5-44)
+        /usr/bin/ld --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_872fb /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. -v CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
+        GNU ld version 2.27-44.base.el7_9.1
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward]
+          add: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include]
+          add: [/usr/local/include]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5] ==> [/usr/include/c++/4.8.5]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux] ==> [/usr/include/c++/4.8.5/x86_64-redhat-linux]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward] ==> [/usr/include/c++/4.8.5/backward]
+        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/4.8.5;/usr/include/c++/4.8.5/x86_64-redhat-linux;/usr/include/c++/4.8.5/backward;/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include;/usr/local/include;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-hIaS8r']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_872fb]
+        ignore line: [[1/2] /usr/bin/c++   -v -o CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o -c /home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c c++ objc obj-c++ java fortran ada go lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/cc1plus -quiet -v -D_GNU_SOURCE /home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccGk6dEj.s]
+        ignore line: [GNU C++ (GCC) version 4.8.5 20150623 (Red Hat 4.8.5-44) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44)  GMP version 6.0.0  MPFR version 3.1.1  MPC version 1.0.1]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../x86_64-redhat-linux/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/x86_64-redhat-linux]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../include/c++/4.8.5/backward]
+        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/4.8.5/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++ (GCC) version 4.8.5 20150623 (Red Hat 4.8.5-44) (x86_64-redhat-linux)]
+        ignore line: [	compiled by GNU C version 4.8.5 20150623 (Red Hat 4.8.5-44)  GMP version 6.0.0  MPFR version 3.1.1  MPC version 1.0.1]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 51b2dcccf6085e5bfbbf3932e5685252]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccGk6dEj.s]
+        ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [[2/2] : && /usr/bin/c++  -v -Wl -v CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_872fb   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c c++ objc obj-c++ java fortran ada go lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_872fb' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_872fb /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. -v CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_872fb] ==> ignore
+          arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o]
+          arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+        ignore line: [collect2 version 4.8.5 20150623 (Red Hat 4.8.5-44)]
+        ignore line: [/usr/bin/ld --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_872fb /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. -v CMakeFiles/cmTC_872fb.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.8.5]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o;/usr/lib64/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5;/usr/lib64;/lib64;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld version 2.27-44.base.el7_9.1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/Internal/FeatureTesting.cmake:87 (_record_compiler_features)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake:124 (_record_compiler_features_cxx)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeDetermineCompilerSupport.cmake:70 (cmake_record_cxx_compile_features)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CMakeTestCXXCompiler.cmake:83 (CMAKE_DETERMINE_COMPILER_SUPPORT)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting CXX compile features"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BgM6QK"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BgM6QK"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "CMAKE_CXX_FEATURE_TEST"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BgM6QK'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_d800b
+        [1/2] /usr/bin/c++   -std=c++1y -o CMakeFiles/cmTC_d800b.dir/feature_tests.cxx.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BgM6QK/feature_tests.cxx
+        [2/2] : && /usr/bin/c++   CMakeFiles/cmTC_d800b.dir/feature_tests.cxx.o -o cmTC_d800b   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindBLAS.cmake:379 (check_function_exists)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindBLAS.cmake:423 (check_blas_libraries)"
+      - "CMakeLists.txt:126 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-qp3y28"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-qp3y28"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "BLAS_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-qp3y28'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_984f0
+        [1/2] /usr/bin/cc  -I/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/../../../include -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_984f0.dir/CheckFunctionExists.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-qp3y28/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=sgemm_  CMakeFiles/cmTC_984f0.dir/CheckFunctionExists.c.o -o cmTC_984f0   && :
+        FAILED: cmTC_984f0 
+        : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=sgemm_  CMakeFiles/cmTC_984f0.dir/CheckFunctionExists.c.o -o cmTC_984f0   && :
+        CMakeFiles/cmTC_984f0.dir/CheckFunctionExists.c.o: In function `main':
+        CheckFunctionExists.c:(.text+0x10): undefined reference to `sgemm_'
+        collect2: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindBLAS.cmake:477 (find_package)"
+      - "CMakeLists.txt:126 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-xYkxqx"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-xYkxqx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-xYkxqx'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_2abbc
+        [1/2] /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD -I/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/../../../include  -o CMakeFiles/cmTC_2abbc.dir/src.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-xYkxqx/src.c
+        [2/2] : && /usr/bin/cc   CMakeFiles/cmTC_2abbc.dir/src.c.o -o cmTC_2abbc   && :
+        FAILED: cmTC_2abbc 
+        : && /usr/bin/cc   CMakeFiles/cmTC_2abbc.dir/src.c.o -o cmTC_2abbc   && :
+        CMakeFiles/cmTC_2abbc.dir/src.c.o: In function `main':
+        src.c:(.text+0x2d): undefined reference to `pthread_create'
+        src.c:(.text+0x39): undefined reference to `pthread_detach'
+        src.c:(.text+0x45): undefined reference to `pthread_cancel'
+        src.c:(.text+0x56): undefined reference to `pthread_join'
+        src.c:(.text+0x6a): undefined reference to `pthread_atfork'
+        collect2: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckLibraryExists.cmake:78 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindBLAS.cmake:477 (find_package)"
+      - "CMakeLists.txt:126 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-VPsTZV"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-VPsTZV"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-VPsTZV'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_5a9ee
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_5a9ee.dir/CheckFunctionExists.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-VPsTZV/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_5a9ee.dir/CheckFunctionExists.c.o -o cmTC_5a9ee  -lpthreads && :
+        FAILED: cmTC_5a9ee 
+        : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_5a9ee.dir/CheckFunctionExists.c.o -o cmTC_5a9ee  -lpthreads && :
+        /usr/bin/ld: cannot find -lpthreads
+        collect2: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckLibraryExists.cmake:78 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindBLAS.cmake:477 (find_package)"
+      - "CMakeLists.txt:126 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-mUOaKk"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-mUOaKk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-mUOaKk'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_d0c8b
+        [1/2] /usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_d0c8b.dir/CheckFunctionExists.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-mUOaKk/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=pthread_create  CMakeFiles/cmTC_d0c8b.dir/CheckFunctionExists.c.o -o cmTC_d0c8b  -lpthread && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindBLAS.cmake:379 (check_function_exists)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindBLAS.cmake:673 (check_blas_libraries)"
+      - "CMakeLists.txt:126 (find_package)"
+    checks:
+      - "Looking for sgemm_"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-IIRCMJ"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-IIRCMJ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "BLAS_mkl_intel_lp64_deps_mkl_intel_thread_deps_mkl_core_deps_iomp5_deps_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-IIRCMJ'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_ff959
+        [1/2] /usr/bin/cc  -I/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/../../../include -DCHECK_FUNCTION_EXISTS=sgemm_ -o CMakeFiles/cmTC_ff959.dir/CheckFunctionExists.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-IIRCMJ/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=sgemm_  CMakeFiles/cmTC_ff959.dir/CheckFunctionExists.c.o -o cmTC_ff959  -Wl,-rpath,/home/menko/.conda/envs/qgd/lib  /home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so  /home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so  /home/menko/.conda/envs/qgd/lib/libmkl_core.so  /home/menko/.conda/envs/qgd/lib/libiomp5.so  -lpthread  -lm  -ldl && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindLAPACK.cmake:220 (check_function_exists)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindLAPACK.cmake:399 (check_lapack_libraries)"
+      - "CMakeLists.txt:127 (find_package)"
+    checks:
+      - "Looking for cheev_"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-TFHez9"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-TFHez9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "LAPACK_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-TFHez9'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_80424
+        [1/2] /usr/bin/cc  -I/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/../../../include -DCHECK_FUNCTION_EXISTS=cheev_ -o CMakeFiles/cmTC_80424.dir/CheckFunctionExists.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-TFHez9/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=cheev_  CMakeFiles/cmTC_80424.dir/CheckFunctionExists.c.o -o cmTC_80424  -Wl,-rpath,/home/menko/.conda/envs/qgd/lib  /home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so  /home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so  /home/menko/.conda/envs/qgd/lib/libmkl_core.so  /home/menko/.conda/envs/qgd/lib/libiomp5.so  -lpthread  -lm  -ldl  -lpthread  -lm  -ldl && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:252 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:522 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:128 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-H1WB3z"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-H1WB3z"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-H1WB3z'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_c479e
+        [1/2] /usr/bin/cc   -fopenmp -o CMakeFiles/cmTC_c479e.dir/OpenMPTryFlag.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-H1WB3z/OpenMPTryFlag.c
+        [2/2] : && /usr/bin/cc -fopenmp -v CMakeFiles/cmTC_c479e.dir/OpenMPTryFlag.c.o -o cmTC_c479e   && :
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+        Thread model: posix
+        gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
+        Reading specs from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/libgomp.spec
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_c479e' '-mtune=generic' '-march=x86-64' '-pthread'
+         /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c479e /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_c479e.dir/OpenMPTryFlag.c.o -lgomp -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:296 (message)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:522 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:128 (find_package)"
+    message: |
+      Parsed C OpenMP implicit link information from above output:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-H1WB3z']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_c479e]
+        ignore line: [[1/2] /usr/bin/cc   -fopenmp -o CMakeFiles/cmTC_c479e.dir/OpenMPTryFlag.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-H1WB3z/OpenMPTryFlag.c]
+        ignore line: [[2/2] : && /usr/bin/cc -fopenmp -v CMakeFiles/cmTC_c479e.dir/OpenMPTryFlag.c.o -o cmTC_c479e   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c c++ objc obj-c++ java fortran ada go lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/]
+        ignore line: [Reading specs from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/libgomp.spec]
+        ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_c479e' '-mtune=generic' '-march=x86-64' '-pthread']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_c479e /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_c479e.dir/OpenMPTryFlag.c.o -lgomp -lgcc --as-needed -lgcc_s --no-as-needed -lpthread -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_c479e] ==> ignore
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..]
+          arg [CMakeFiles/cmTC_c479e.dir/OpenMPTryFlag.c.o] ==> ignore
+          arg [-lgomp] ==> lib [gomp]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-lpthread] ==> lib [pthread]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.8.5]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> [/usr/lib]
+        implicit libs: [gomp;gcc;gcc_s;pthread;c;gcc;gcc_s]
+        implicit objs: []
+        implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5;/usr/lib64;/lib64;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:252 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:522 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:128 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BGciP0"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BGciP0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BGciP0'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_59d28
+        [1/2] /usr/bin/c++   -fopenmp -std=gnu++11 -o CMakeFiles/cmTC_59d28.dir/OpenMPTryFlag.cpp.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BGciP0/OpenMPTryFlag.cpp
+        [2/2] : && /usr/bin/c++ -fopenmp -v CMakeFiles/cmTC_59d28.dir/OpenMPTryFlag.cpp.o -o cmTC_59d28   && :
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+        Thread model: posix
+        gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
+        Reading specs from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/libgomp.spec
+        COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_59d28' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+         /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_59d28 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_59d28.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:296 (message)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:522 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:128 (find_package)"
+    message: |
+      Parsed CXX OpenMP implicit link information from above output:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BGciP0']
+        ignore line: []
+        ignore line: [Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_59d28]
+        ignore line: [[1/2] /usr/bin/c++   -fopenmp -std=gnu++11 -o CMakeFiles/cmTC_59d28.dir/OpenMPTryFlag.cpp.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BGciP0/OpenMPTryFlag.cpp]
+        ignore line: [[2/2] : && /usr/bin/c++ -fopenmp -v CMakeFiles/cmTC_59d28.dir/OpenMPTryFlag.cpp.o -o cmTC_59d28   && :]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper]
+        ignore line: [Target: x86_64-redhat-linux]
+        ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c c++ objc obj-c++ java fortran ada go lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+        ignore line: [Thread model: posix]
+        ignore line: [gcc version 4.8.5 20150623 (Red Hat 4.8.5-44) (GCC) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/]
+        ignore line: [Reading specs from /usr/lib/gcc/x86_64-redhat-linux/4.8.5/libgomp.spec]
+        ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_59d28' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_59d28 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_59d28.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--no-add-needed] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_59d28] ==> ignore
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..]
+          arg [CMakeFiles/cmTC_59d28.dir/OpenMPTryFlag.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgomp] ==> lib [gomp]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.8.5]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64] ==> [/usr/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gomp;gcc_s;gcc;pthread;c;gcc_s;gcc]
+        implicit objs: []
+        implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5;/usr/lib64;/lib64;/usr/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:456 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:596 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:128 (find_package)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-pMvNWr"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-pMvNWr"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-pMvNWr'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_f4b90
+        [1/2] /usr/bin/cc   -fopenmp -o CMakeFiles/cmTC_f4b90.dir/OpenMPCheckVersion.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-pMvNWr/OpenMPCheckVersion.c
+        [2/2] : && /usr/bin/cc -fopenmp  CMakeFiles/cmTC_f4b90.dir/OpenMPCheckVersion.c.o -o cmTC_f4b90   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:456 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/FindOpenMP.cmake:596 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:128 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-UrNRkT"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-UrNRkT"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-UrNRkT'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_f6db2
+        [1/2] /usr/bin/c++   -fopenmp -std=gnu++11 -o CMakeFiles/cmTC_f6db2.dir/OpenMPCheckVersion.cpp.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-UrNRkT/OpenMPCheckVersion.cpp
+        [2/2] : && /usr/bin/c++ -fopenmp  CMakeFiles/cmTC_f6db2.dir/OpenMPCheckVersion.cpp.o -o cmTC_f6db2   && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "CMakeLists.txt:134 (check_function_exists)"
+    checks:
+      - "Looking for MKL_Set_Num_Threads"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-oV1F0k"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-oV1F0k"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "BLAS_IS_MKL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-oV1F0k'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_30da4
+        [1/2] /usr/bin/cc  -I/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/../../../include -DCHECK_FUNCTION_EXISTS=MKL_Set_Num_Threads -o CMakeFiles/cmTC_30da4.dir/CheckFunctionExists.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-oV1F0k/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=MKL_Set_Num_Threads  CMakeFiles/cmTC_30da4.dir/CheckFunctionExists.c.o -o cmTC_30da4  -Wl,-rpath,/home/menko/.conda/envs/qgd/lib  /home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so  /home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so  /home/menko/.conda/envs/qgd/lib/libmkl_core.so  /home/menko/.conda/envs/qgd/lib/libiomp5.so  -lpthread  -lm  -ldl  -lm  -ldl && :
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "CMakeLists.txt:135 (check_function_exists)"
+    checks:
+      - "Looking for openblas_set_num_threads"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-TWZVdN"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-TWZVdN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "BLAS_IS_OPENBLAS"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-TWZVdN'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_0f751
+        [1/2] /usr/bin/cc  -I/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/../../../include -DCHECK_FUNCTION_EXISTS=openblas_set_num_threads -o CMakeFiles/cmTC_0f751.dir/CheckFunctionExists.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-TWZVdN/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=openblas_set_num_threads  CMakeFiles/cmTC_0f751.dir/CheckFunctionExists.c.o -o cmTC_0f751  -Wl,-rpath,/home/menko/.conda/envs/qgd/lib  /home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so  /home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so  /home/menko/.conda/envs/qgd/lib/libmkl_core.so  /home/menko/.conda/envs/qgd/lib/libiomp5.so  -lpthread  -lm  -ldl  -lm  -ldl && :
+        FAILED: cmTC_0f751 
+        : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=openblas_set_num_threads  CMakeFiles/cmTC_0f751.dir/CheckFunctionExists.c.o -o cmTC_0f751  -Wl,-rpath,/home/menko/.conda/envs/qgd/lib  /home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so  /home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so  /home/menko/.conda/envs/qgd/lib/libmkl_core.so  /home/menko/.conda/envs/qgd/lib/libiomp5.so  -lpthread  -lm  -ldl  -lm  -ldl && :
+        CMakeFiles/cmTC_0f751.dir/CheckFunctionExists.c.o: In function `main':
+        CheckFunctionExists.c:(.text+0x10): undefined reference to `openblas_set_num_threads'
+        collect2: error: ld returned 1 exit status
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckFunctionExists.cmake:93 (try_compile)"
+      - "CMakeLists.txt:138 (check_function_exists)"
+    checks:
+      - "Looking for LAPACKE_zggev"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BlNhWf"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BlNhWf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "LAPACKE_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BlNhWf'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_6ab46
+        [1/2] /usr/bin/cc  -I/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/../../../include -DCHECK_FUNCTION_EXISTS=LAPACKE_zggev -o CMakeFiles/cmTC_6ab46.dir/CheckFunctionExists.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-BlNhWf/CheckFunctionExists.c
+        [2/2] : && /usr/bin/cc -DCHECK_FUNCTION_EXISTS=LAPACKE_zggev  CMakeFiles/cmTC_6ab46.dir/CheckFunctionExists.c.o -o cmTC_6ab46  -Wl,-rpath,/home/menko/.conda/envs/qgd/lib  /home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so  /home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so  /home/menko/.conda/envs/qgd/lib/libmkl_core.so  /home/menko/.conda/envs/qgd/lib/libiomp5.so  -lpthread  -lm  -ldl  -lm  -ldl && :
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/Internal/CheckSourceRuns.cmake:99 (try_run)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckCXXSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "cmake/check_AVX.cmake:42 (check_cxx_source_runs)"
+      - "CMakeLists.txt:170 (CHECK_FOR_AVX)"
+    checks:
+      - "Performing Test HAVE_AVX_EXTENSIONS"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-0oXn7I"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-0oXn7I"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "HAVE_AVX_EXTENSIONS_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-0oXn7I'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_e25df
+        [1/2] /usr/bin/c++ -DHAVE_AVX_EXTENSIONS -I/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/../../../include -mavx -std=gnu++11 -o CMakeFiles/cmTC_e25df.dir/src.cxx.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-0oXn7I/src.cxx
+        [2/2] : && /usr/bin/c++ -mavx  CMakeFiles/cmTC_e25df.dir/src.cxx.o -o cmTC_e25df   && :
+        
+      exitCode: 0
+    runResult:
+      variable: "HAVE_AVX_EXTENSIONS_EXITCODE"
+      cached: true
+      stdout: |
+      stderr: |
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/Internal/CheckSourceRuns.cmake:99 (try_run)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckCXXSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "cmake/check_AVX.cmake:85 (check_cxx_source_runs)"
+      - "CMakeLists.txt:170 (CHECK_FOR_AVX)"
+    checks:
+      - "Performing Test HAVE_AVX2_EXTENSIONS"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-dAf0yc"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-dAf0yc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "HAVE_AVX2_EXTENSIONS_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-dAf0yc'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_7e26a
+        [1/2] /usr/bin/c++ -DHAVE_AVX2_EXTENSIONS -I/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/../../../include -mavx2 -std=gnu++11 -o CMakeFiles/cmTC_7e26a.dir/src.cxx.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-dAf0yc/src.cxx
+        [2/2] : && /usr/bin/c++ -mavx2  CMakeFiles/cmTC_7e26a.dir/src.cxx.o -o cmTC_7e26a   && :
+        
+      exitCode: 0
+    runResult:
+      variable: "HAVE_AVX2_EXTENSIONS_EXITCODE"
+      cached: true
+      stdout: |
+      stderr: |
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/cmake/data/share/cmake-3.31/Modules/CheckIncludeFileCXX.cmake:98 (try_compile)"
+      - "CMakeLists.txt:296 (check_include_file_cxx)"
+    checks:
+      - "Looking for C++ include tbb/tbb.h"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-A6FwmG"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-A6FwmG"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake"
+    buildResult:
+      variable: "TBB_HEADER"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-A6FwmG'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v cmTC_5b622
+        [1/2] /usr/bin/c++  -I/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/../../../include -c -std=gnu++11 -o CMakeFiles/cmTC_5b622.dir/CheckIncludeFile.cxx.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/CMakeScratch/TryCompile-A6FwmG/CheckIncludeFile.cxx
+        [2/2] : && /usr/bin/c++ -c  CMakeFiles/cmTC_5b622.dir/CheckIncludeFile.cxx.o -o cmTC_5b622   && :
+        c++: warning: CMakeFiles/cmTC_5b622.dir/CheckIncludeFile.cxx.o: linker input file unused because linking not done
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:383 (try_compile)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:508 (_test_weak_link_project)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:462 (_check_dynamic_lookup)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake/targetLinkLibrariesWithDynamicLookup.cmake:543 (check_dynamic_lookup)"
+      - "/home/menko/.conda/envs/qgd/lib/python3.8/site-packages/skbuild/resources/cmake/FindPythonExtensions.cmake:427 (target_link_libraries_with_dynamic_lookup)"
+      - "squander/decomposition/CMakeLists.txt:15 (python_extension_module)"
+    directories:
+      source: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeTmp/link_flags/gnu_ld_ignore/MODULE/SHARED/src"
+      binary: "/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeTmp/link_flags/gnu_ld_ignore/MODULE/SHARED/build"
+    buildResult:
+      variable: "project_compiles"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeTmp/link_flags/gnu_ld_ignore/MODULE/SHARED/build'
+        
+        Run Build Command(s): /home/menko/.conda/envs/qgd/bin/ninja -v
+        [1/6] /usr/bin/cc -Dmain_EXPORTS -I/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeTmp/link_flags/gnu_ld_ignore/MODULE/SHARED/src  -o CMakeFiles/main.dir/main.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeTmp/link_flags/gnu_ld_ignore/MODULE/SHARED/src/main.c
+        [2/6] /usr/bin/cc -Dnumber_EXPORTS -I/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeTmp/link_flags/gnu_ld_ignore/MODULE/SHARED/src -fPIC -o CMakeFiles/number.dir/number.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeTmp/link_flags/gnu_ld_ignore/MODULE/SHARED/src/number.c
+        [3/6] /usr/bin/cc -Dcounter_EXPORTS -I/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeTmp/link_flags/gnu_ld_ignore/MODULE/SHARED/src -fPIC -o CMakeFiles/counter.dir/counter.c.o -c /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeTmp/link_flags/gnu_ld_ignore/MODULE/SHARED/src/counter.c
+        [4/6] : && /usr/bin/cc -fPIC   -Wl,--unresolved-symbols=ignore-all -shared  -o counter.so CMakeFiles/counter.dir/counter.c.o   && :
+        [5/6] : && /usr/bin/cc -fPIC    -shared -Wl,-soname,libnumber.so -o libnumber.so CMakeFiles/number.dir/number.c.o   && :
+        [6/6] : && /usr/bin/cc  -Wl,--export-dynamic -rdynamic CMakeFiles/main.dir/main.c.o -o main  -Wl,-rpath,/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeTmp/link_flags/gnu_ld_ignore/MODULE/SHARED/build  libnumber.so  -ldl && :
+        
+      exitCode: 0
+...

@@ -1,0 +1,1 @@
+{"args": ["/home/menko/.conda/envs/qgd/bin/cmake", "-DCMAKE_BUILD_TYPE:STRING=Release"], "version": "3.31.4", "environment": {"PYTHONNOUSERSITE": null, "PYTHONPATH": null}}
