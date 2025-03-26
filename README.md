@@ -2,7 +2,7 @@
 This is a forked version of the [SQUANDER]{https://github.com/rakytap/sequential-quantum-gate-decomposer} package.\\
 I am woring in the `sequential-quantum-gate-decomposer`/`examples`/`VQE` folder. My main project is to run Variational Quantum Eigensolver (VQE) algorithm with different classical optimization methods. 
 
-### Modified$^*$ or created files
+### Modified* or created files
 - `Heisenberg_VQE.py` (modified): 
     - Added argument parser for improved flexibility in script execution.
     - Modfied the `config` variable.
@@ -13,7 +13,7 @@ I am woring in the `sequential-quantum-gate-decomposer`/`examples`/`VQE` folder.
 - `explore_simulations.py` (created): A script that generates figures from simulation results.
 - `run_simulations.sh` (created): A Bash script for running simulations in a `screen` session.
 
-$^*$My modifications are marked with my monogram (MB) as follows:
+*My modifications are marked with my monogram (MB) as follows:
 ```python
 # original codes ...
 ##### //MB\\
