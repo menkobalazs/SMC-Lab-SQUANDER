@@ -37,6 +37,8 @@ parser.add_argument("-l", "--layers", help="Number of layers", type=int, default
 parser.add_argument("-q", "--qbit_num", help="Number of qubits", type=int, default=10)
 parser.add_argument("-p", "--init_parameters", help="Zero or random initial parameters.", type=str, default='zero',
                     choices=['zero', 'random'])
+parser.add_argument("-d", "-degree", help="Degree of random regula graph. It generates the Hamiltonian's topology.", 
+                    type=int, default=3, choices=[2,3,4])
 args = parser.parse_args()
 ##### \\MB//
 
@@ -68,7 +70,7 @@ def generate_hamiltonian_tmp(n):
 
 
 def generate_hamiltonian(n):
-    topology = random_regular_graph(3,n,seed=31415).edges
+    topology = random_regular_graph(args.degree,n,seed=31415).edges ##### //MB// 3->args.degree
     oplist = []
     for i in topology:
         oplist.append(("XX",[i[0],i[1]],1))
@@ -76,7 +78,7 @@ def generate_hamiltonian(n):
         oplist.append(("ZZ",[i[0],i[1]],1))
     for i in range(n):
         oplist.append(("Z",[i],1))
-    return SparsePauliOp.from_sparse_list(oplist,num_qubits=n).to_matrix(True)
+    return topology, SparsePauliOp.from_sparse_list(oplist,num_qubits=n).to_matrix(True)
 
 
 # The number of circuit layers
@@ -91,7 +93,10 @@ qbit_num = args.qbit_num ##### //MB// 10->args.qbit_num
 
 
 # generate the Hamiltonian
-Hamiltonian = generate_hamiltonian_tmp( qbit_num )
+topology, Hamiltonian = generate_hamiltonian( qbit_num ) ##### //MB// generate_hamiltonian_tmp->generate_hamiltonian
+##### //MB\\
+# Todo: save topology as nx graph
+##### \\MB//
 
 
 # obtain the groud state energy of the Hamitonian
