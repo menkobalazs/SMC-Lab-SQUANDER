@@ -1,3 +1,4 @@
+print('-- --- Start optimization process --- --')
 from scipy.stats import unitary_group
 import numpy as np
 from squander import Variational_Quantum_Eigensolver
@@ -57,7 +58,7 @@ def generate_hamiltonian_tmp(n):
     
     oplist = []
     for i in topology:
-        oplist.append(("XX",[i[0],i[1]],1))
+        oplist.append(("XX",[i[0],i[1]],1)) 
         oplist.append(("YY",[i[0],i[1]],1))
         oplist.append(("ZZ",[i[0],i[1]],1))
     for i in range(n):
@@ -148,11 +149,9 @@ if args.optimizer.upper() in ['NELDER_MEAD', 'POWELL', 'COBYLA']:
         global cost_function_evaluations
         global VQE_energy_one_step_before
         VQE_energy = VQE_Heisenberg.Optimization_Problem(params)
-        if VQE_energy < 0.99*eigval:
-            raise StopIteration
+        if cost_function_evaluations%1000==0:
+            print(f"-- number of costfunc evaluation: {cost_function_evaluations}; VQE_energy={VQE_energy}", end='\r')
         if VQE_energy_one_step_before >= VQE_energy+0.001:
-            if cost_function_evaluations%500==0:
-                print(f"-- data saved to file -- costfunc evaluation: {cost_function_evaluations}; VQE_energy={VQE_energy}", end='\r')
             saved_data.write(f"{cost_function_evaluations}\t{VQE_energy}\n") 
             VQE_energy_one_step_before = VQE_energy
         cost_function_evaluations += 1 
@@ -178,7 +177,8 @@ elif args.init_parameters == "random":
     np.random.seed(137) 
     parameter_minval, parameter_maxval = -0.01, 0.01
     parameters = np.random.uniform(parameter_minval, parameter_minval, param_num) 
-else:   raise ValueError(f"init_parameters must be either 'zero' or 'random' and not '{args.init_parameters}'")
+else:   
+    raise ValueError(f"init_parameters must be either 'zero' or 'random' and not '{args.init_parameters}'")
 ##### \\MB//
 
 ##### //MB\\
@@ -211,24 +211,20 @@ print(' ', flush=True)
 print('-- Start optimization process')
 
 cost_function_evaluations = 0
-
-for iter_idx in range(400):
+for iter_idx in range(50): ##### //MB// 400->50
     # start an etap of the optimization (max_inner_iterations iterations)
     ##### //MB\\
     if args.optimizer.upper() in ['NELDER_MEAD', 'POWELL', 'COBYLA']:
         scipy_method_name= {'NELDER_MEAD':'Nelder-Mead', 'POWELL':'Powell', 'COBYLA':'Cobyla'}
-        
-        try:
-            with open(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt", "a") as f:
-                min_process = minimize(objective_function, parameters, args=(f,),
-                            method=scipy_method_name[args.optimizer.upper()],
-                            options={"maxiter":config['max_inner_iterations']}
-                            )
-            parameters = min_process.x
-            VQE_energy = min_process.fun
-            
-        except StopIteration:
-            print("-- Optimization stopped early as the target energy was reached.")
+
+        with open(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt", "a") as f:
+            min_process = minimize(objective_function, parameters, args=(f,), tol=5e-2,
+                        method=scipy_method_name[args.optimizer.upper()],
+                        options={'maxfev':5e5, 'disp':True, 'xtol':0.5}
+                        # options: https://docs.scipy.org/doc/scipy-0.14.0/reference/generated/scipy.optimize.show_options.html
+                        )
+        parameters = min_process.x
+        VQE_energy = min_process.fun
     else:
     ##### \\MB//
         VQE_Heisenberg.Start_Optimization()
@@ -269,13 +265,14 @@ for iter_idx in range(400):
         print('The overlap integral with the exact eigenstates of energy ', eigvals[idx], ' is: ', overlap_norm[idx] )
     
     print('The sum of the calculated overlaps: ', np.sum(overlap_norm ) )  
-    print('--- ', VQE_energy )  
     
     ##### //MB\\
     if iter_idx == 1:
         opt_VQE_Energy = np.loadtxt(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt")
         if opt_VQE_Energy[0,1] - opt_VQE_Energy[-1,1] < 1:
            break
+    if args.optimizer.upper() in ['NELDER_MEAD', 'POWELL', 'COBYLA']:
+         break
     ##### \\MB//
     if ( VQE_energy < 0.99*eigval):
         break
@@ -287,4 +284,6 @@ with open(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.
     json.dump(logs, f, indent=4)
 ##### \\MB//
     
-print("-- End of optimization process") 
+print("-- --- Finish optimization process --- --")
+print() 
+print()
