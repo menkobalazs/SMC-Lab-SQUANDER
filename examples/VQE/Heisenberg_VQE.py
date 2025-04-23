@@ -37,8 +37,10 @@ parser.add_argument("-l", "--layers", help="Number of layers", type=int, default
 parser.add_argument("-q", "--qbit_num", help="Number of qubits", type=int, default=10)
 parser.add_argument("-p", "--init_parameters", help="Zero or random initial parameters.", type=str, default='zero',
                     choices=['zero', 'random'])
-parser.add_argument("-d", "-degree", help="Degree of random regula graph. It generates the Hamiltonian's topology.", 
+parser.add_argument("-d", "--degree", help="Degree of random regular graph which generates the Hamiltonian's topology.", 
                     type=int, default=3, choices=[2,3,4])
+parser.add_argument("-s", "--random_seed", help="Seed for random regular graph which generates the Hamiltonian's topology.", 
+                    type=int, default=31415)
 args = parser.parse_args()
 ##### \\MB//
 
@@ -70,9 +72,9 @@ def generate_hamiltonian_tmp(n):
 
 
 def generate_hamiltonian(n):
-    topology = random_regular_graph(args.degree,n,seed=31415).edges ##### //MB// 3->args.degree
+    topology = random_regular_graph(args.degree,n,seed=args.random_seed) ##### //MB// 3->args.degree
     oplist = []
-    for i in topology:
+    for i in topology.edges:
         oplist.append(("XX",[i[0],i[1]],1))
         oplist.append(("YY",[i[0],i[1]],1))
         oplist.append(("ZZ",[i[0],i[1]],1))
@@ -125,7 +127,8 @@ VQE_Heisenberg = Variational_Quantum_Eigensolver(Hamiltonian, qbit_num, config)
 
 ##### //MB\\
 optimizer_folder_name = args.optimizer.upper()
-VQE_Heisenberg.set_Project_Name(f'data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}')
+project_name = f'data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_d={args.degree}_s={args.random_seed}'
+VQE_Heisenberg.set_Project_Name(project_name=project_name)
 
 try:
     os.mkdir('data/'+optimizer_folder_name)
@@ -133,7 +136,7 @@ try:
 except FileExistsError:
     print(f"-- Directory '{optimizer_folder_name}' already exists in 'data' folder.", end=' ')
     try:
-        os.remove(f'data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt'  ) 
+        os.remove(project_name+'_costfuncs_and_entropy.txt'  ) 
         print("Earlier simulation has been deleted.")
     except:
         print()
@@ -141,7 +144,7 @@ except PermissionError:
     print(f"-- Permission denied: Unable to create 'data/{optimizer_folder_name}'.")
 except Exception as e:
     print(f"-- An error occurred: {e}")
-print(f"-- Run simulation with '{args.optimizer}' method; init param: '{args.init_parameters}'; N_qb={args.qbit_num}; layers={args.layers}")
+print(f"-- Run simulation with '{args.optimizer}' method; init param: '{args.init_parameters}'; N_qb={args.qbit_num}; layers={args.layers}; seed={args.random_seed}")
 ##### \\MB//
 
 # set the optimization engine to agents
@@ -198,7 +201,7 @@ if args.init_parameters == 'random':
     logs['init_parameters_between'] = [parameter_minval, parameter_maxval]
 logs['config'] = config
 logs['start_optimization'] = datetime.datetime.now().isoformat()  
-with open(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_logs.json", "w") as f:
+with open(project_name+"_logs.json", "w") as f:
     json.dump(logs, f, indent=4)
 ##### \\MB//
 
@@ -222,7 +225,7 @@ for iter_idx in range(50): ##### //MB// 400->50
     if args.optimizer.upper() in ['NELDER_MEAD', 'POWELL', 'COBYLA']:
         scipy_method_name= {'NELDER_MEAD':'Nelder-Mead', 'POWELL':'Powell', 'COBYLA':'Cobyla'}
 
-        with open(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt", "a") as f:
+        with open(project_name+"_costfuncs_and_entropy.txt", "a") as f:
             min_process = minimize(objective_function, parameters, args=(f,), tol=5e-2,
                         method=scipy_method_name[args.optimizer.upper()],
                         options={'maxfev':5e5, 'disp':True, 'xtol':0.5}
@@ -253,7 +256,7 @@ for iter_idx in range(50): ##### //MB// 400->50
     print('Current VQE energy: ', VQE_energy, ' normalized entropy: ', normalized_entropy)
 
     ##### //MB\\ ##just modified
-    np.save(f'data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}.npy', parameters, topology ) 
+    np.save(project_name+'.npy', parameters, topology ) 
     ##### \\MB//
            
     initial_state = np.zeros( (1 << qbit_num), dtype=np.complex128 )
@@ -273,11 +276,11 @@ for iter_idx in range(50): ##### //MB// 400->50
     
     ##### //MB\\
     if iter_idx == 1:
-        opt_VQE_Energy = np.loadtxt(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_costfuncs_and_entropy.txt")
+        opt_VQE_Energy = np.loadtxt(project_name+"_costfuncs_and_entropy.txt")
         if opt_VQE_Energy[0,1] - opt_VQE_Energy[-1,1] < 1:
            break
-    if args.optimizer.upper() in ['NELDER_MEAD', 'POWELL', 'COBYLA']:
-         break
+   # if args.optimizer.upper() in ['NELDER_MEAD', 'POWELL', 'COBYLA']:
+   #      break
     ##### \\MB//
     if ( VQE_energy < 0.99*eigval):
         break
@@ -285,7 +288,7 @@ for iter_idx in range(50): ##### //MB// 400->50
 
 ##### //MB\\
 logs['end_optimization'] = datetime.datetime.now().isoformat()
-with open(f"data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_logs.json", "w") as f:
+with open(project_name+"_logs.json", "w") as f:
     json.dump(logs, f, indent=4)
 ##### \\MB//
     
