@@ -12,3 +12,5 @@ _skbuild/*
 squander.egg-info/*
 costfuncs_and_entropy.txt
 examples/VQE/data/
+key_2
+key_2.pub

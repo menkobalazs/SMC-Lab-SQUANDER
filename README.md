@@ -1,6 +1,7 @@
 # Scientific Modelling Computer Laboratory 2024/25/2 @ ELTE
-This is a forked version of the [SQUANDER]{https://github.com/rakytap/sequential-quantum-gate-decomposer} package.\\
-I am woring in the `sequential-quantum-gate-decomposer`/`examples`/`VQE` folder. My main project is to run Variational Quantum Eigensolver (VQE) algorithm with different classical optimization methods. 
+This is a forked version of the [SQUANDER](https://github.com/rakytap/sequential-quantum-gate-decomposer) package.
+
+I am working in the `sequential-quantum-gate-decomposer`/`examples`/`VQE` folder. My main project is to run Variational Quantum Eigensolver (VQE) algorithm with different classical optimization methods. 
 
 ### Created folders
 - `data`: All the simulations stored here.
@@ -16,8 +17,10 @@ I am woring in the `sequential-quantum-gate-decomposer`/`examples`/`VQE` folder.
     - Added an option for random initialization of the parameter vector.
     - Created a log file generator for tracking execution details.
 - `run_simulations.sh` (created): A Bash script for running simulations in a `screen` session.
+- `run_degree_change.sh` (created): A Bash script for running simulations with different node degree values.
 - `explore_simulations.py` (created): A script that generates figures from simulation results.
-
+- `explore_nw_degree_changes.py` (created): A script that generates figures from simulation results with different node degree val.
+- `explore_nw_degree_changes_OLD.py` (created): It is the older version of above python file.
 
 *My modifications are marked with my monogram (MB) as follows:
 ```python
