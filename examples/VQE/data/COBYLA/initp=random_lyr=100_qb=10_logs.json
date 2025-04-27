@@ -1,0 +1,26 @@
+{
+    "ground_state_of_Hamiltonian": -21.28080635662793,
+    "method": "COBYLA",
+    "layers": 100,
+    "qbit_num": 10,
+    "init_parameters": "random",
+    "init_parameters_between": [
+        -0.01,
+        0.01
+    ],
+    "config": {
+        "max_inner_iterations": 400,
+        "batch_size": 32,
+        "agent_num": 1,
+        "agent_lifetime": 1,
+        "linesearch_points_agent": 3,
+        "agent_exploration_rate": 0.0,
+        "eta": 0.0001,
+        "adaptive_eta": 0,
+        "use_line_search": 0,
+        "output_periodicity": 4,
+        "convergence_length": 20
+    },
+    "start_optimization": "2025-03-29T23:12:43.031719",
+    "end_optimization": "2025-03-29T23:12:55.537883"
+}

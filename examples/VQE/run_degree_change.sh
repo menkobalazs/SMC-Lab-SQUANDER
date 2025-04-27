@@ -15,7 +15,7 @@ done
 
 
 
-# Generate
+# Generate datasets with different degrees
 
 #for OPT in "${OPTIMIZERS[@]}"; do
 #    for DEGREE in "${DEGREES[@]}"; do
