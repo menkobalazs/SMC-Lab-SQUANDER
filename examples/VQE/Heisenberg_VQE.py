@@ -1,4 +1,4 @@
-print('-- --- Start optimization process --- --')
+print('-- --- Start simulation --- --')
 from scipy.stats import unitary_group
 import numpy as np
 from squander import Variational_Quantum_Eigensolver
@@ -13,7 +13,7 @@ from qiskit.quantum_info import SparsePauliOp
 np.set_printoptions(linewidth=200) 
 
 ##### //MB\\
-    # new imports
+    # new imports #
 import argparse
 import os
 from scipy.optimize import minimize
@@ -30,9 +30,7 @@ def to_uppercase(choice):
 parser.add_argument("-o", "--optimizer", help="Name of optimizer", type=to_uppercase, required=True,
                     choices=['AGENTS', 'AGENTS_COMBINED', 'COSINE', 'GRAD_DESCEND_PARAMETER_SHIFT_RULE', 
                              'BFGS', 'ADAM', 'GRAD_DESCEND', 'BAYES_OPT', 'BAYES_AGENTS', 
-                             'NELDER_MEAD', 'POWELL', 'COBYLA', 
-                             ]
-                    )
+                             'NELDER_MEAD', 'POWELL', 'COBYLA'])
 parser.add_argument("-l", "--layers", help="Number of layers", type=int, default=100)
 parser.add_argument("-q", "--qbit_num", help="Number of qubits", type=int, default=10)
 parser.add_argument("-p", "--init_parameters", help="Zero or random initial parameters.", type=str, default='zero',
@@ -41,6 +39,10 @@ parser.add_argument("-d", "--degree", help="Degree of random regular graph which
                     type=int, default=3, choices=[2,3,4])
 parser.add_argument("-s", "--random_seed", help="Seed for random regular graph which generates the Hamiltonian's topology.", 
                     type=int, default=31415)
+parser.add_argument("--max_func_eval", help="Stop simulation after max_func_eval cost function evaluations.", 
+                    type=float, default=1e9)
+parser.add_argument("--max_outer_iter", help="Number of maximum outer iterations in the simulation.", 
+                    type=int, default=50)
 args = parser.parse_args()
 ##### \\MB//
 
@@ -127,7 +129,8 @@ VQE_Heisenberg = Variational_Quantum_Eigensolver(Hamiltonian, qbit_num, config)
 
 ##### //MB\\
 optimizer_folder_name = args.optimizer.upper()
-project_name = f'data/{optimizer_folder_name}/initp={args.init_parameters}_lyr={args.layers}_qb={args.qbit_num}_d={args.degree}_s={args.random_seed}'
+project_name = f'data/{optimizer_folder_name}/initp={args.init_parameters}_'+\
+               f'lyr={args.layers}_qb={args.qbit_num}_d={args.degree}_s={args.random_seed}'
 VQE_Heisenberg.set_Project_Name(project_name=project_name)
 
 try:
@@ -144,7 +147,8 @@ except PermissionError:
     print(f"-- Permission denied: Unable to create 'data/{optimizer_folder_name}'.")
 except Exception as e:
     print(f"-- An error occurred: {e}")
-print(f"-- Run simulation with '{args.optimizer}' method; init param: '{args.init_parameters}'; N_qb={args.qbit_num}; layers={args.layers}; seed={args.random_seed}")
+print(f"-- Run simulation with '{args.optimizer}' method; init param: '{args.init_parameters}';"+\
+      f" N_qb={args.qbit_num}; layers={args.layers}; seed={args.random_seed}; max_func_eval={args.max_func_eval}")
 ##### \\MB//
 
 # set the optimization engine to agents
@@ -201,6 +205,7 @@ if args.init_parameters == 'random':
     logs['init_parameters_between'] = [parameter_minval, parameter_maxval]
 logs['config'] = config
 logs['start_optimization'] = datetime.datetime.now().isoformat()  
+log_stop_reason='unknown'
 with open(project_name+"_logs.json", "w") as f:
     json.dump(logs, f, indent=4)
 ##### \\MB//
@@ -218,10 +223,11 @@ print('The normalized entropy of the exact ground state evaluated on qubits 0 an
 print(' ', flush=True)
 print('-- Start optimization process')
 
-cost_function_evaluations = 0
-for iter_idx in range(50): ##### //MB// 400->50
+cost_function_evaluations = 0 ##### //MB// 
+for iter_idx in range(args.max_outer_iter): ##### //MB// 400->args.max_outer_iter
     # start an etap of the optimization (max_inner_iterations iterations)
     ##### //MB\\
+    print(f"-- iteration: {iter_idx+1}/{args.max_outer_iter}")
     if args.optimizer.upper() in ['NELDER_MEAD', 'POWELL', 'COBYLA']:
         scipy_method_name= {'NELDER_MEAD':'Nelder-Mead', 'POWELL':'Powell', 'COBYLA':'Cobyla'}
 
@@ -275,23 +281,27 @@ for iter_idx in range(50): ##### //MB// 400->50
     print('The sum of the calculated overlaps: ', np.sum(overlap_norm ) )  
     
     ##### //MB\\
-    if iter_idx == 1:
-        opt_VQE_Energy = np.loadtxt(project_name+"_costfuncs_and_entropy.txt")
-        if opt_VQE_Energy[0,1] - opt_VQE_Energy[-1,1] < 1:
-           break
-   # if args.optimizer.upper() in ['NELDER_MEAD', 'POWELL', 'COBYLA']:
-   #      break
+    opt_VQE_Energy = np.loadtxt(project_name+"_costfuncs_and_entropy.txt")
+    if (iter_idx == 1) and (opt_VQE_Energy[0,1] - opt_VQE_Energy[-1,1] < 1):
+        log_stop_reason='Opt. energy did not changed.'
+        break
+    if len(opt_VQE_Energy)>=args.max_func_eval:
+        print("-- The simulation finished: maximum cost function evaluation reached.")
+        log_stop_reason = "Max cost function iteration reached."
+        break
     ##### \\MB//
     if ( VQE_energy < 0.99*eigval):
+        log_stop_reason = "VQE_enery<10.99*eigval" ##### //MB//
         break
         
 
 ##### //MB\\
 logs['end_optimization'] = datetime.datetime.now().isoformat()
+logs['stop_reason'] = log_stop_reason
 with open(project_name+"_logs.json", "w") as f:
     json.dump(logs, f, indent=4)
-##### \\MB//
     
-print("-- --- Finish optimization process --- --")
+print("-- --- Finish simulation --- --")
 print() 
 print()
+##### \\MB//

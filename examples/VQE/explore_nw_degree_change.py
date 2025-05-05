@@ -16,7 +16,7 @@ parser.add_argument("-f", "--format", help="File format of saved figures",
                     choices=['jpg', 'pdf'])
 args = parser.parse_args()
 
-### Used optimizers:
+### Possible optimizers:
 # 'ADAM', 'BFGS', 'COSINE', 'GRAD_DESCEND', 'GRAD_DESCEND_PARAMETER_SHIFT_RULE', <-- gradient-based optimizers
 # 'POWELL', 'COBYLA', 'NELDER_MEAD' <-- gradient-free optimizers
 optimizers = ['ADAM', 'COSINE', 'POWELL']
@@ -36,11 +36,6 @@ for opt in optimizers:
 
 
 plt.figure(figsize=(16,9))
-
-
-
-
-
 
 for i in range(3):
     degree = i+2
