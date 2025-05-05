@@ -31,7 +31,33 @@ limitations under the License.
 
 
 /// @brief Type definition of operation types (also generalized for decomposition classes derived from the class Operation_Block)
-typedef enum gate_type {GENERAL_OPERATION, UN_OPERATION, ON_OPERATION, CZ_OPERATION, CNOT_OPERATION, CH_OPERATION, U3_OPERATION, RY_OPERATION, RX_OPERATION, RZ_OPERATION, RZ_P_OPERATION, X_OPERATION, SX_OPERATION, CRY_OPERATION, SYC_OPERATION, BLOCK_OPERATION, COMPOSITE_OPERATION, ADAPTIVE_OPERATION, DECOMPOSITION_BASE_CLASS, SUB_MATRIX_DECOMPOSITION_CLASS, N_QUBIT_DECOMPOSITION_CLASS_BASE, N_QUBIT_DECOMPOSITION_CLASS, Y_OPERATION, Z_OPERATION, H_OPERATION, CZ_NU_OPERATION, CUSTOM_KERNEL_1QUBIT_GATE_OPERATION} gate_type;
+typedef enum gate_type {GENERAL_OPERATION=1, 
+                        UN_OPERATION=2, 
+                        ON_OPERATION=3, 
+                        CZ_OPERATION=4, 
+                        CNOT_OPERATION=5, 
+                        CH_OPERATION=6, 
+                        U3_OPERATION=7, 
+                        RY_OPERATION=8, 
+                        RX_OPERATION=9, 
+                        RZ_OPERATION=10, 
+                        RZ_P_OPERATION=11, 
+                        X_OPERATION=12, 
+                        SX_OPERATION=13, 
+                        CRY_OPERATION=14, 
+                        SYC_OPERATION=15, 
+                        BLOCK_OPERATION=16, 
+                        COMPOSITE_OPERATION=17, 
+                        ADAPTIVE_OPERATION=18, 
+                        DECOMPOSITION_BASE_CLASS=19, 
+                        SUB_MATRIX_DECOMPOSITION_CLASS=10, 
+                        N_QUBIT_DECOMPOSITION_CLASS_BASE=21, 
+                        N_QUBIT_DECOMPOSITION_CLASS=22, 
+                        Y_OPERATION=23, 
+                        Z_OPERATION=24, 
+                        H_OPERATION=25, 
+                        CZ_NU_OPERATION=26, 
+                        CUSTOM_KERNEL_1QUBIT_GATE_OPERATION=27} gate_type;
 
 
 
@@ -43,6 +69,8 @@ class Gate : public logging {
 
 protected:
 
+    /// A string labeling the gate operation
+    std::string name;
     /// number of qubits spanning the matrix of the operation
     int qbit_num;
     /// The type of the operation (see enumeration gate_type)
@@ -280,6 +308,13 @@ std::vector<Gate*> get_children();
 @param start_idx The starting index
 */
 int get_parameter_start_idx();
+
+
+/**
+@brief Call to get the name label of the gate
+@return Returns with the name label of the gate
+*/
+std::string get_name();
 
 /**
 @brief Call to create a clone of the present class

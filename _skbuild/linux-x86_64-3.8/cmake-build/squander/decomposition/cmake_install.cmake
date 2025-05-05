@@ -83,21 +83,41 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_non_unitary_adaptive_Wrapper.cpython-38-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_non_unitary_adaptive_Wrapper.cpython-38-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tree_Search_Wrapper.cpython-38-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tree_Search_Wrapper.cpython-38-x86_64-linux-gnu.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_non_unitary_adaptive_Wrapper.cpython-38-x86_64-linux-gnu.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tree_Search_Wrapper.cpython-38-x86_64-linux-gnu.so"
          RPATH "$ORIGIN/..:/home/menko/.conda/envs/qgd/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/squander/decomposition" TYPE MODULE FILES "/home/menko/squander/sequential-quantum-gate-decomposer/squander/decomposition/qgd_N_Qubit_Decomposition_non_unitary_adaptive_Wrapper.cpython-38-x86_64-linux-gnu.so")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_non_unitary_adaptive_Wrapper.cpython-38-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_non_unitary_adaptive_Wrapper.cpython-38-x86_64-linux-gnu.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/squander/decomposition" TYPE MODULE FILES "/home/menko/squander/sequential-quantum-gate-decomposer/squander/decomposition/qgd_N_Qubit_Decomposition_Tree_Search_Wrapper.cpython-38-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tree_Search_Wrapper.cpython-38-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tree_Search_Wrapper.cpython-38-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_non_unitary_adaptive_Wrapper.cpython-38-x86_64-linux-gnu.so"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tree_Search_Wrapper.cpython-38-x86_64-linux-gnu.so"
          OLD_RPATH "/home/menko/squander/sequential-quantum-gate-decomposer/squander:/home/menko/.conda/envs/qgd/lib:"
          NEW_RPATH "$ORIGIN/..:/home/menko/.conda/envs/qgd/lib")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_non_unitary_adaptive_Wrapper.cpython-38-x86_64-linux-gnu.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tree_Search_Wrapper.cpython-38-x86_64-linux-gnu.so")
+    endif()
+  endif()
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper.cpython-38-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper.cpython-38-x86_64-linux-gnu.so")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper.cpython-38-x86_64-linux-gnu.so"
+         RPATH "$ORIGIN/..:/home/menko/.conda/envs/qgd/lib")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/squander/decomposition" TYPE MODULE FILES "/home/menko/squander/sequential-quantum-gate-decomposer/squander/decomposition/qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper.cpython-38-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper.cpython-38-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper.cpython-38-x86_64-linux-gnu.so")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper.cpython-38-x86_64-linux-gnu.so"
+         OLD_RPATH "/home/menko/squander/sequential-quantum-gate-decomposer/squander:/home/menko/.conda/envs/qgd/lib:"
+         NEW_RPATH "$ORIGIN/..:/home/menko/.conda/envs/qgd/lib")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/squander/decomposition/qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper.cpython-38-x86_64-linux-gnu.so")
     endif()
   endif()
 endif()

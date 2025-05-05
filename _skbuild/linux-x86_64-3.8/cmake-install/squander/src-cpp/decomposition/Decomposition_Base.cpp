@@ -22,6 +22,7 @@ limitations under the License.
 
 #include "Decomposition_Base.h"
 #include "Sub_Matrix_Decomposition_Cost_Function.h"
+#include <limits>
 
 // default layer numbers
 std::map<int,int> Decomposition_Base::max_layer_num_def;
@@ -33,7 +34,8 @@ std::map<int,int> Decomposition_Base::max_layer_num_def;
 Decomposition_Base::Decomposition_Base() {
 
 	
-
+    // A string labeling the gate operation
+    name = "Decomposition_Interface";
 
     Init_max_layer_num();
 
@@ -45,7 +47,7 @@ Decomposition_Base::Decomposition_Base() {
     type = DECOMPOSITION_BASE_CLASS;
 
     // error of the unitarity of the final decomposition
-    decomposition_error = -1;
+    decomposition_error = DBL_MAX;
 
     // number of finalizing (deterministic) opertaions counted from the top of the array of gates
     finalizing_gates_num = 0;
@@ -54,7 +56,7 @@ Decomposition_Base::Decomposition_Base() {
     finalizing_parameter_num = 0;
 
     // The current minimum of the optimization problem
-    current_minimum = 1e10;
+    current_minimum = std::numeric_limits<double>::max();
 
     // The global minimum of the optimization problem
     global_target_minimum = 0;
@@ -114,6 +116,9 @@ Decomposition_Base::Decomposition_Base() {
 */
 Decomposition_Base::Decomposition_Base( Matrix Umtx_in, int qbit_num_in, std::map<std::string, Config_Element>& config_in, guess_type initial_guess_in= CLOSE_TO_ZERO ) : Gates_block(qbit_num_in) {
 
+    // A string labeling the gate operation
+    name = "Decomposition_Interface";
+
     Init_max_layer_num();
 
    
@@ -127,7 +132,7 @@ Decomposition_Base::Decomposition_Base( Matrix Umtx_in, int qbit_num_in, std::ma
     type = DECOMPOSITION_BASE_CLASS;
 
     // error of the unitarity of the final decomposition
-    decomposition_error = -1;
+    decomposition_error = DBL_MAX;
 
     // number of finalizing (deterministic) opertaions counted from the top of the array of gates
     finalizing_gates_num = 0;
@@ -136,7 +141,7 @@ Decomposition_Base::Decomposition_Base( Matrix Umtx_in, int qbit_num_in, std::ma
     finalizing_parameter_num = 0;
 
     // The current minimum of the optimization problem
-    current_minimum = 1e10;
+    current_minimum = std::numeric_limits<double>::max();
 
     // The global minimum of the optimization problem
     global_target_minimum = 0;
@@ -263,7 +268,7 @@ void  Decomposition_Base::solve_optimization_problem( double* solution_guess, in
         }
 
         // setting the initial value for the current minimum
-        current_minimum = 1e8;
+        current_minimum = std::numeric_limits<double>::max();
 
         // store the gates
         std::vector<Gate*> gates_loc = gates;

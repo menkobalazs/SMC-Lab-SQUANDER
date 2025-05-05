@@ -1,7 +1,8 @@
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-install/squander/libqgd.so
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-install/squander/decomposition/qgd_N_Qubit_Decomposition_Wrapper.cpython-38-x86_64-linux-gnu.so
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-install/squander/decomposition/qgd_N_Qubit_Decomposition_adaptive_Wrapper.cpython-38-x86_64-linux-gnu.so
-/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-install/squander/decomposition/qgd_N_Qubit_Decomposition_non_unitary_adaptive_Wrapper.cpython-38-x86_64-linux-gnu.so
+/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-install/squander/decomposition/qgd_N_Qubit_Decomposition_Tree_Search_Wrapper.cpython-38-x86_64-linux-gnu.so
+/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-install/squander/decomposition/qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper.cpython-38-x86_64-linux-gnu.so
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-install/squander/decomposition/qgd_N_Qubit_Decomposition_custom_Wrapper.cpython-38-x86_64-linux-gnu.so
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-install/squander/gates/qgd_U3_Wrapper.cpython-38-x86_64-linux-gnu.so
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-install/squander/gates/qgd_CNOT_Wrapper.cpython-38-x86_64-linux-gnu.so

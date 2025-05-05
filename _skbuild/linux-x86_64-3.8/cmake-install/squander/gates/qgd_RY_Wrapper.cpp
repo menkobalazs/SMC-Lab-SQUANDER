@@ -186,6 +186,31 @@ qgd_RY_Wrapper_apply_to( qgd_RY_Wrapper *self, PyObject *args ) {
     // parsing input arguments
     if (!PyArg_ParseTuple(args, "|OO", &parameters_arr, &unitary_arg )) 
         return Py_BuildValue("i", -1);
+
+
+    if ( unitary_arg == NULL ) {
+        PyErr_SetString(PyExc_Exception, "Input matrix was not given");
+        return NULL;
+    }
+
+
+    if ( parameters_arr == NULL ) {
+        PyErr_SetString(PyExc_Exception, "Parameters were not given");
+        return NULL;
+    }
+
+
+
+    if ( PyArray_TYPE(parameters_arr) != NPY_DOUBLE ) {
+        PyErr_SetString(PyExc_Exception, "Parameter vector should be real typed");
+        return NULL;
+    }
+    
+    
+    if ( PyArray_TYPE(unitary_arg) != NPY_COMPLEX128 ) {
+        PyErr_SetString(PyExc_Exception, "input matrix or state should be complex typed");
+        return NULL;
+    }    
     
     if ( PyArray_IS_C_CONTIGUOUS(parameters_arr) ) {
         Py_INCREF(parameters_arr);
@@ -197,11 +222,6 @@ qgd_RY_Wrapper_apply_to( qgd_RY_Wrapper *self, PyObject *args ) {
     // get the C++ wrapper around the data
     Matrix_real&& parameters_mtx = numpy2matrix_real( parameters_arr );
 
-    // convert python object array to numpy C API array
-    if ( unitary_arg == NULL ) {
-        PyErr_SetString(PyExc_Exception, "Input matrix was not given");
-        return NULL;
-    }
 
     PyArrayObject* unitary = (PyArrayObject*)PyArray_FROM_OTF( (PyObject*)unitary_arg, NPY_COMPLEX128, NPY_ARRAY_IN_ARRAY);
 
@@ -214,8 +234,27 @@ qgd_RY_Wrapper_apply_to( qgd_RY_Wrapper *self, PyObject *args ) {
     // create QGD version of the input matrix
     Matrix unitary_mtx = numpy2matrix(unitary);
 
-    int parallel = 1;
-    self->gate->apply_to( parameters_mtx, unitary_mtx, parallel );
+    try {
+        int parallel = 1;
+        self->gate->apply_to( parameters_mtx, unitary_mtx, parallel );
+    }
+    catch (std::string err) {
+    
+        Py_DECREF(parameters_arr);
+        Py_DECREF(unitary);
+    
+        PyErr_SetString(PyExc_Exception, err.c_str());
+        return NULL;
+    }
+    catch(...) {
+    
+        Py_DECREF(parameters_arr);
+        Py_DECREF(unitary);
+    
+        std::string err( "Invalid pointer to gate class");
+        PyErr_SetString(PyExc_Exception, err.c_str());
+        return NULL;
+    }
     
     if (unitary_mtx.data != PyArray_DATA(unitary)) {
         memcpy(PyArray_DATA(unitary), unitary_mtx.data, unitary_mtx.size() * sizeof(QGD_Complex16));
@@ -310,6 +349,31 @@ qgd_RY_Wrapper_get_Control_Qbit( qgd_RY_Wrapper *self ) {
 
 }
 
+/**
+@brief Call to set the target qbit
+*/
+static PyObject *
+qgd_RY_Wrapper_set_Target_Qbit( qgd_RY_Wrapper *self, PyObject *args ) {
+    int target_qbit_in = -1;
+    if (!PyArg_ParseTuple(args, "|i", &target_qbit_in )) 
+        return Py_BuildValue("i", -1);
+        
+    try{
+    self->gate->set_target_qbit(target_qbit_in);
+    }
+    catch (std::string err) {
+    PyErr_SetString(PyExc_Exception, err.c_str());
+    return NULL;
+    }
+    catch(...) {
+    std::string err( "Invalid pointer to circuit class");
+    PyErr_SetString(PyExc_Exception, err.c_str());
+    return NULL;
+    }
+    
+    return Py_BuildValue("i", 0);
+
+}
 
 /**
 @brief Call to extract the paramaters corresponding to the gate, from a parameter array associated to the circuit in which the gate is embedded.
@@ -394,6 +458,9 @@ static PyMethodDef qgd_RY_Wrapper_methods[] = {
     },
     {"get_Control_Qbit", (PyCFunction) qgd_RY_Wrapper_get_Control_Qbit, METH_NOARGS,
      "Call to get the control qbit (returns with -1 if no control qbit is used in the gate)."
+    },
+    {"set_Target_Qbit", (PyCFunction) qgd_RY_Wrapper_set_Target_Qbit, METH_VARARGS,
+     "Call to set the target qbit."
     },
     {"Extract_Parameters", (PyCFunction) qgd_RY_Wrapper_Extract_Parameters, METH_VARARGS,
      "Call to extract the paramaters corresponding to the gate, from a parameter array associated to the circuit in which the gate is embedded."

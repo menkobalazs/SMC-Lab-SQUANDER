@@ -171,7 +171,7 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=CQGD
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=1.9.0
+CMAKE_PROJECT_VERSION:STATIC=1.9.2
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
@@ -180,7 +180,7 @@ CMAKE_PROJECT_VERSION_MAJOR:STATIC=1
 CMAKE_PROJECT_VERSION_MINOR:STATIC=9
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=0
+CMAKE_PROJECT_VERSION_PATCH:STATIC=2
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -365,6 +365,12 @@ qgd_H_Wrapper_LIB_DEPENDS:STATIC=general;qgd;general;/home/menko/.conda/envs/qgd
 
 //Dependencies for the target
 qgd_LIB_DEPENDS:STATIC=general;/home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so;general;/home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so;general;/home/menko/.conda/envs/qgd/lib/libmkl_core.so;general;/home/menko/.conda/envs/qgd/lib/libiomp5.so;general;-lpthread;general;-lm;general;-ldl;general;/home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so;general;/home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so;general;/home/menko/.conda/envs/qgd/lib/libmkl_core.so;general;/home/menko/.conda/envs/qgd/lib/libiomp5.so;general;-lpthread;general;-lm;general;-ldl;general;-lpthread;general;-lm;general;-ldl;general;/home/menko/.conda/envs/qgd/lib/libtbbmalloc.so;general;/home/menko/.conda/envs/qgd/lib/libtbbmalloc_proxy.so;general;/home/menko/.conda/envs/qgd/lib/libtbb.so;general;/usr/lib/gcc/x86_64-redhat-linux/4.8.5/libgomp.so;general;/usr/lib64/libpthread.so;
+
+//Dependencies for the target
+qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper_LIB_DEPENDS:STATIC=general;qgd;general;/home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so;general;/home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so;general;/home/menko/.conda/envs/qgd/lib/libmkl_core.so;general;/home/menko/.conda/envs/qgd/lib/libiomp5.so;general;-lpthread;general;-lm;general;-ldl;general;/home/menko/.conda/envs/qgd/lib/libtbb.so;general;/home/menko/.conda/envs/qgd/lib/libtbbmalloc.so;general;;;
+
+//Dependencies for the target
+qgd_N_Qubit_Decomposition_Tree_Search_Wrapper_LIB_DEPENDS:STATIC=general;qgd;general;/home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so;general;/home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so;general;/home/menko/.conda/envs/qgd/lib/libmkl_core.so;general;/home/menko/.conda/envs/qgd/lib/libiomp5.so;general;-lpthread;general;-lm;general;-ldl;general;/home/menko/.conda/envs/qgd/lib/libtbb.so;general;/home/menko/.conda/envs/qgd/lib/libtbbmalloc.so;general;;;
 
 //Dependencies for the target
 qgd_N_Qubit_Decomposition_Wrapper_LIB_DEPENDS:STATIC=general;qgd;general;/home/menko/.conda/envs/qgd/lib/libmkl_intel_lp64.so;general;/home/menko/.conda/envs/qgd/lib/libmkl_intel_thread.so;general;/home/menko/.conda/envs/qgd/lib/libmkl_core.so;general;/home/menko/.conda/envs/qgd/lib/libiomp5.so;general;-lpthread;general;-lm;general;-ldl;general;/home/menko/.conda/envs/qgd/lib/libtbb.so;general;/home/menko/.conda/envs/qgd/lib/libtbbmalloc.so;general;;;

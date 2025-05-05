@@ -8,7 +8,8 @@
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/CMakeFiles/install/strip.dir
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/squander/decomposition/CMakeFiles/qgd_N_Qubit_Decomposition_Wrapper.dir
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/squander/decomposition/CMakeFiles/qgd_N_Qubit_Decomposition_adaptive_Wrapper.dir
-/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/squander/decomposition/CMakeFiles/qgd_N_Qubit_Decomposition_non_unitary_adaptive_Wrapper.dir
+/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/squander/decomposition/CMakeFiles/qgd_N_Qubit_Decomposition_Tree_Search_Wrapper.dir
+/home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/squander/decomposition/CMakeFiles/qgd_N_Qubit_Decomposition_Tabu_Search_Wrapper.dir
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/squander/decomposition/CMakeFiles/qgd_N_Qubit_Decomposition_custom_Wrapper.dir
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/squander/decomposition/CMakeFiles/test.dir
 /home/menko/squander/sequential-quantum-gate-decomposer/_skbuild/linux-x86_64-3.8/cmake-build/squander/decomposition/CMakeFiles/edit_cache.dir

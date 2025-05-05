@@ -19,8 +19,8 @@ I am working in the `sequential-quantum-gate-decomposer`/`examples`/`VQE` folder
 - `run_simulations.sh` (created): A Bash script for running simulations in a `screen` session.
 - `run_degree_change.sh` (created): A Bash script for running simulations with different node degree values.
 - `explore_simulations.py` (created): A script that generates figures from simulation results.
-- `explore_nw_degree_changes.py` (created): A script that generates figures from simulation results with different node degree val.
-- `explore_nw_degree_changes_OLD.py` (created): It is the older version of above python file.
+- `explore_nw_parameter_change.py` (created): A script that generates figures from simulation results with different node degree val.
+- `explore_nw_degree_change.py` (created): It is the older version of above python file.
 
 *My modifications are marked with my monogram (MB) as follows:
 ```python
